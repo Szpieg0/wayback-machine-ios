@@ -20,9 +20,5 @@ class SecondContentViewController: UIViewController {
             self.present(enableExtensionViewController, animated: true, completion: nil)
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
 }

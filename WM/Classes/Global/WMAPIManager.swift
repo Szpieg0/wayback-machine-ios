@@ -5,7 +5,9 @@
 //  Created by mac-admin on 8/23/17.
 //  Copyright © 2017 Admin. All rights reserved.
 //
-// ** OLD CODE: Please use WMSAPIManager instead! **
+// ** DEPRECATED: This is old code. Please use WMSAPIManager instead! **
+// TODO: Remove this file entirely once all references are migrated to WMSAPIManager
+// WMSAPIManager provides better cross-platform support and is actively maintained
 
 import Foundation
 import Alamofire

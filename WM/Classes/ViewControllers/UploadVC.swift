@@ -72,11 +72,6 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UIPopoverCont
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func _onUpload(_ sender: Any) {
         if !validateFields() {
             return

@@ -155,12 +155,10 @@ class WMSAPIManager {
         guard let opPath = WMSAPIManager.XA_OPS[operation] else { return }
         let url = WMSAPIManager.XA_BASE_URL + opPath
 
-        // TEST TO REMOVE
+        // Debug logging (credentials removed for security)
         if (DEBUG_LOG) { NSLog("*** SendDataToService() url: \(url)") }
-        if (DEBUG_LOG) { NSLog("***   loggedInUser: \(String(describing: loggedInUser))") }
-        if (DEBUG_LOG) { NSLog("***   loggedInSig: \(String(describing: loggedInSig))") }
-        if (DEBUG_LOG) { NSLog("***   accessKey: \(String(describing: accessKey))") }
-        if (DEBUG_LOG) { NSLog("***   secretKey: \(String(describing: secretKey))") }
+        // SECURITY: Never log credentials (loggedInUser, loggedInSig, accessKey, secretKey)
+        // Use Keychain for secure storage, not UserDefaults or logs
 
         // clear existing cookies
         Alamofire.SessionManager.default.session.configuration.httpCookieStorage?.removeCookies(since: Date.distantPast)
@@ -180,9 +178,9 @@ class WMSAPIManager {
             headers["Authorization"] = "LOW \(accessKey):\(secretKey)" // don't know if this does anything
         }
 
-        // TEST TO REMOVE
-        if (DEBUG_LOG) { NSLog("***   headers: \(headers)") }
+        // Debug logging (sensitive headers removed for security)
         if (DEBUG_LOG) { NSLog("***   params: \(parameters)") }
+        // SECURITY: Headers may contain Authorization tokens - do not log in production
 
         let req = Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { (response) in

@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.1'
+# Updated to iOS 12.0 for consistency with post_install hook and modern iOS APIs
+platform :ios, '12.0'
 
 target 'WayBackMachine' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks

@@ -52,11 +52,6 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     //- MARK: Delegates
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
