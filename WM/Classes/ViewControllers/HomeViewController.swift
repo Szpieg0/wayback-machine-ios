@@ -213,10 +213,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, MBProgressHUDDe
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     @objc func showErrorMessage(message: String) {
         let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         errorAlert.addAction(UIAlertAction(title: "OK", style: .default) {action in

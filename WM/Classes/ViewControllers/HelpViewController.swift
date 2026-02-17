@@ -75,10 +75,6 @@ class HelpViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         return firstPageControllerViewIndex
     }
     */
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: - PageViewController Delegate
     
